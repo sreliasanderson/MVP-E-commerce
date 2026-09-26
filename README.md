@@ -1,4 +1,3 @@
-Markdown
 # MVP E-commerce - Gestão de Pedidos e Logística (Cenário 2)
 
 ## Descrição do Projeto
