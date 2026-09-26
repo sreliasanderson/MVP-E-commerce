@@ -103,15 +103,16 @@ Exemplo do pedido feito:
 {"endereco_entrega":"Pra\u00e7a da S\u00e9, S\u00e9 - S\u00e3o Paulo/SP","frete_calculado":15.0,"mensagem":"Pedido criado com sucesso","pedido_id":1}
 
 ```
-Documentação Interativa (Swagger)
+### Documentação Interativa (Swagger)
 A aplicação possui uma interface visual para facilitar a interação e o teste de todas as rotas implementadas. Com os containers em execução, abra o seu navegador e aceda aos seguintes endereços:
-Documentação da API Principal: http://localhost:5000/apidocs/
-Documentação da API Secundária: http://localhost:5001/apidocs/
+
+Documentação da API Principal: `http://localhost:5000/apidocs/`
+Documentação da API Secundária: `http://localhost:5001/apidocs/`
 
 Através destas páginas, poderá submeter pedidos de teste (como criar um novo pedido com um CEP de destino) e validar em tempo real a orquestração entre a API de Pedidos, a API de Logística e o ViaCEP.
 
-
 O retorno exibirá o endereço (trazido pelo ViaCEP) e o valor do frete (trazido pela API Secundária).
+
 ### Passo 6: Desligar a aplicação
 Para interromper a execução, rode:
 
