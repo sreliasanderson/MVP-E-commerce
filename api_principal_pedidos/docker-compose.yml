@@ -1,0 +1,14 @@
+services:
+  api_principal:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - LOGISTICA_URL=http://api_secundaria:5001/api/frete/calcular
+    depends_on:
+      - api_secundaria
+
+  api_secundaria:
+    build: ../api_secundaria_logistica
+    ports:
+      - "5001:5001"
