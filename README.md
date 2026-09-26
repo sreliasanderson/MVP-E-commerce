@@ -57,21 +57,21 @@ mkdir mvp-ecommerce
 cd mvp-ecommerce
 ```
 
-Passo 2: Clonar os repositórios
+### Passo 2: Clonar os repositórios
 Clone ambos os módulos para dentro da pasta raiz criada:
 
 Bash
-# Repositório da API Principal
+Repositório da API Principal
 ```
 git clone [https://github.com/seu-usuario/api_principal_pedidos.git](https://github.com/seu-usuario/api_principal_pedidos.git)
 ```
-# Repositório da API Secundária
+Repositório da API Secundária
 ```
 git clone [https://github.com/seu-usuario/api_secundaria_logistica.git](https://github.com/seu-usuario/api_secundaria_logistica.git)
 ```
 
 (Importante: O diretório da API Secundária deve manter o nome exato api_secundaria_logistica para que o Docker Compose o identifique corretamente).
-Passo 3: Inicialização dos Containers
+### Passo 3: Inicialização dos Containers
 O arquivo docker-compose.yml foi disponibilizado na raiz do repositório da API principal. Navegue até essa pasta e inicialize os serviços:
 
 ```Bash
@@ -80,7 +80,7 @@ sudo docker compose up --build -d
 ```
 
 O Docker irá criar os containers, instalar as bibliotecas Python (Flask, requests) e configurar os bancos de dados SQLite automaticamente.
-Passo 4: Verificação do Ambiente
+### Passo 4: Verificação do Ambiente
 Confirme que os dois microsserviços estão ativos e em execução:
 
 ```Bash
@@ -88,7 +88,7 @@ sudo docker compose ps
 ```
 
 A API Principal estará acessível na porta 5000 e a Secundária na porta 5001.
-Passo 5: Teste Funcional (Exemplo de Fluxo)
+### Passo 5: Teste Funcional (Exemplo de Fluxo)
 Você pode simular o funcionamento da orquestração de serviços criando um pedido:
 
 
@@ -100,7 +100,7 @@ curl -X POST http://localhost:5000/api/pedidos \
 ```
 
 O retorno exibirá o endereço (trazido pelo ViaCEP) e o valor do frete (trazido pela API Secundária).
-Passo 6: Desligar a aplicação
+### Passo 6: Desligar a aplicação
 Para interromper a execução, rode:
 
 ```Bash
