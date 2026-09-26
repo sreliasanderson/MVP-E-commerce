@@ -106,8 +106,8 @@ Exemplo do pedido feito:
 ### Documentação Interativa (Swagger)
 A aplicação possui uma interface visual para facilitar a interação e o teste de todas as rotas implementadas. Com os containers em execução, abra o seu navegador e aceda aos seguintes endereços:
 
-Documentação da API Principal: `http://localhost:5000/apidocs/`
-Documentação da API Secundária: `http://localhost:5001/apidocs/`
+* **Documentação da API Principal:** `http://localhost:5000/apidocs/`
+* **Documentação da API Secundária:** `http://localhost:5001/apidocs/`
 
 Através destas páginas, poderá submeter pedidos de teste (como criar um novo pedido com um CEP de destino) e validar em tempo real a orquestração entre a API de Pedidos, a API de Logística e o ViaCEP.
 
