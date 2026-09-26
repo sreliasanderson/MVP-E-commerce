@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-Flask-blue)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED)
 
-## 📌 Descrição do Projeto
+## Descrição do Projeto
 
 Este projeto compõe o Produto Mínimo Viável (MVP) de um sistema de e-commerce focado na arquitetura de microsserviços baseada no Cenário 2. A aplicação adota a componentização para dividir o sistema em módulos independentes, facilitando o desenvolvimento escalável e a manutenção.
 
@@ -15,7 +15,7 @@ O sistema é estruturado da seguinte forma:
 
 ---
 
-## 🌐 Integração com API Externa (ViaCEP)
+## Integração com API Externa (ViaCEP)
 
 A API Principal consulta os dados da API pública ViaCEP de forma transparente, não causando o redirecionamento do usuário para outra aplicação.
 
@@ -26,7 +26,7 @@ A API Principal consulta os dados da API pública ViaCEP de forma transparente, 
 
 ---
 
-## 📂 Estrutura de Diretórios
+## Estrutura de Diretórios
 
 Os componentes estão separados em dois repositórios distintos para garantir a autonomia de cada serviço:
 
@@ -35,7 +35,7 @@ Os componentes estão separados em dois repositórios distintos para garantir a 
 
 ---
 
-## 🛣️ Rotas Implementadas
+## Rotas Implementadas
 
 Ambos os microsserviços implementam o padrão REST com pelo menos 4 rotas, contemplando os métodos POST, GET, PUT e DELETE.
 
@@ -57,7 +57,7 @@ Ambos os microsserviços implementam o padrão REST com pelo menos 4 rotas, cont
 
 ---
 
-## 🚀 Pré-requisitos
+## Pré-requisitos
 
 Para garantir a execução utilizando containers, o seu ambiente deve conter as seguintes ferramentas instaladas:
 - [Git](https://git-scm.com/) (para clonar os repositórios)
@@ -65,7 +65,7 @@ Para garantir a execução utilizando containers, o seu ambiente deve conter as 
 
 ---
 
-## 🛠️ Instruções de Instalação e Execução (Step-by-Step)
+## Instruções de Instalação e Execução (Step-by-Step)
 
 ### Passo 1: Preparar o ambiente local
 Como o sistema utiliza dois repositórios separados, crie uma pasta raiz para agrupá-los e facilitar a execução via Docker Compose:
@@ -87,7 +87,7 @@ git clone https://github.com/seu-usuario/api_principal_pedidos.git
 ```bash
 git clone https://github.com/seu-usuario/api_secundaria_logistica.git
 ```
-> ⚠️ **Importante:** O diretório da API Secundária deve manter o nome exato `api_secundaria_logistica` para que o Docker Compose o identifique corretamente.
+> **Importante:** O diretório da API Secundária deve manter o nome exato `api_secundaria_logistica` para que o Docker Compose o identifique corretamente.
 
 ### Passo 3: Inicialização dos Containers
 O arquivo `docker-compose.yml` foi disponibilizado na raiz do repositório da API principal. Navegue até essa pasta e inicialize os serviços:
@@ -96,7 +96,7 @@ O arquivo `docker-compose.yml` foi disponibilizado na raiz do repositório da AP
 cd api_principal_pedidos
 sudo docker compose up --build -d
 ```
-> 💡 O Docker irá criar os containers, instalar as bibliotecas Python (Flask, requests) e configurar os bancos de dados SQLite automaticamente.
+> O Docker irá criar os containers, instalar as bibliotecas Python (Flask, requests) e configurar os bancos de dados SQLite automaticamente.
 
 ### Passo 4: Verificação do Ambiente
 Confirme que os dois microsserviços estão ativos e em execução:
@@ -134,12 +134,12 @@ docker-compose down
 
 ---
 
-## 📚 Documentação Interativa (Swagger)
+## Documentação Interativa (Swagger)
 
 A aplicação possui uma interface visual para facilitar a interação e o teste de todas as rotas implementadas. Com os containers em execução, abra o seu navegador e acesse os seguintes endereços:
 
-- 📖 **Documentação da API Principal:** [http://localhost:5000/apidocs/](http://localhost:5000/apidocs/)
-- 📖 **Documentação da API Secundária:** [http://localhost:5001/apidocs/](http://localhost:5001/apidocs/)
+- **Documentação da API Principal:** [http://localhost:5000/apidocs/](http://localhost:5000/apidocs/)
+- **Documentação da API Secundária:** [http://localhost:5001/apidocs/](http://localhost:5001/apidocs/)
 
 Através destas páginas, você poderá submeter pedidos de teste (como criar um novo pedido com um CEP de destino) e validar em tempo real a orquestração entre a API de Pedidos, a API de Logística e o ViaCEP. 
 O retorno exibirá o endereço (trazido pelo ViaCEP) e o valor do frete (trazido pela API Secundária).
