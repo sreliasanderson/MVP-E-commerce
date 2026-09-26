@@ -3,6 +3,7 @@
 ![Status](https://img.shields.io/badge/Status-Concluído-success)
 ![Python](https://img.shields.io/badge/Python-Flask-blue)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED)
+![SQLite](https://img.shields.io/badge/SQLite-003B57)
 
 ## Descrição do Projeto
 
@@ -80,12 +81,12 @@ Clone ambos os módulos para dentro da pasta raiz criada:
 
 **Repositório da API Principal**
 ```bash
-git clone https://github.com/seu-usuario/api_principal_pedidos.git
+sudo git clone https://github.com/sreliasanderson/E-commerce/tree/main/api_principal_pedidos.git
 ```
 
 **Repositório da API Secundária**
 ```bash
-git clone https://github.com/seu-usuario/api_secundaria_logistica.git
+sudo git clone https://github.com/sreliasanderson/E-commerce/tree/main/api_secundaria_logistica.git
 ```
 > **Importante:** O diretório da API Secundária deve manter o nome exato `api_secundaria_logistica` para que o Docker Compose o identifique corretamente.
 
@@ -129,7 +130,7 @@ curl -X POST http://localhost:5000/api/pedidos \
 Para interromper a execução dos containers, rode o comando abaixo na pasta onde está o seu `docker-compose.yml`:
 
 ```bash
-docker-compose down
+sudo docker compose down
 ```
 
 ---
